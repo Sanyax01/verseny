@@ -6,25 +6,39 @@
         xmlns:local="clr-namespace:verseny"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="Black">
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="70"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="start" Content="Start" Width="90" Height="45" Grid.Row="1" Background="BurlyWood" Click="start_Click"/>
-        <Canvas x:Name="palya" Background="White" Grid.Row="3">
+        <Button x:Name="start" Content="Start" Width="90" Height="45" Grid.Row="1" Click="start_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFBB0FD8" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Canvas x:Name="palya" Background="Gray" Grid.Row="3">
             <Button x:Name="auto" Content="Suzuki" Width="90" Height="45" Background="Magenta" 
-                    Canvas.Left="20" Canvas.Top="50" Click="auto_Click" />
+                    Canvas.Left="20" Canvas.Top="50" />
             <Button x:Name="auto1" Content="Subaru" Width="90" Height="45" Background="Blue" Foreground="White"
-        Canvas.Left="20" Canvas.Top="100" Click="auto_Click" />
+        Canvas.Left="20" Canvas.Top="100" />
             <Button x:Name="auto2" Content="Opel" Width="90" Height="45" Background="Black" Foreground="White"
-        Canvas.Left="20" Canvas.Top="150" Click="auto_Click" />
+        Canvas.Left="20" Canvas.Top="150" />
             <Button x:Name="auto3" Content="Audi" Width="90" Height="45" Background="Red" Foreground="White"
-Canvas.Left="20" Canvas.Top="200" Click="auto_Click" />
+Canvas.Left="20" Canvas.Top="200" />
             <Button x:Name="auto4" Content="Toyota" Width="90" Height="45" Background="DarkOrchid"  Foreground="White"
 Canvas.Left="20" Canvas.Top="250" />
+            <TextBlock x:Name="szel1" Width="750"  Height="5" Canvas.Top="45" Background="DarkOrange"/>
+            <TextBlock x:Name="szel2" Width="750"  Height="5" Canvas.Top="95" Background="DarkOrange" />
+            <TextBlock x:Name="szel3" Width="750"  Height="5" Canvas.Top="145" Background="DarkOrange" />
+            <TextBlock x:Name="szel4" Width="750"  Height="5" Canvas.Top="195" Background="DarkOrange" />
+            <TextBlock x:Name="szel5" Width="750"  Height="5" Canvas.Top="245" Background="DarkOrange" />
+            <TextBlock x:Name="szel6" Width="750"  Height="5" Canvas.Top="295" Background="DarkOrange" />
+
             <TextBlock x:Name="Celvonal" Width="20" Height="330" Canvas.Right="20">
                 <TextBlock.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -53,6 +67,6 @@ Canvas.Left="20" Canvas.Top="250" />
                 </TextBlock.Background>
             </TextBlock>
         </Canvas>
-        
+
     </Grid>
 </Window>
